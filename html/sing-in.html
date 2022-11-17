@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/sing-in.css">
+
+    <link href="http://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <title>Регистрация</title>
+</head>
+
+<script src="https://kit.fontawesome.com/b3330d82de.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<body style="background-color: rgba(0, 0, 0, 0.865);">
+
+    <div class="wrapper">
+        <header class="head">
+            <div><a href="file:///C:/Users/User/Desktop/online%20shop%20oleg/html/glav.html">На главную</a></div>
+            <div><a href="file:///C:/Users/User/Desktop/online%20shop%20oleg/html/login.html">Войти</a></div>
+        </header>
+        <section class="fullscreen">
+            <div class="fullscreen__body">
+                <div class="fullscreen__form">
+                    <form action="#" id="form">
+                        <div class="container">
+                          <div style="margin-bottom: 3%;">
+                            <h1 style="color: rgb(198, 198, 198);">Регистрация</h1>
+                            <p id="p_head">Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+                          </div>
+                          
+                      
+                          <div class="margin">
+                            <div class="input-group">
+                                <input required="" type="text" name="first_name" id="first_name" autocomplete="off" class="input">
+                                <label class="user-label">Имя</label>
+                            </div>
+                        
+                            <div class="input-group">
+                                <input required="" type="text" name="last_name" id="last_name" autocomplete="off" class="input">
+                                <label class="user-label">Фамилия</label>
+                            </div>
+                        
+                            <div class="input-group">
+                                <input required="" type="text" name="email" id="email" autocomplete="off" class="input">
+                                <label class="user-label">Почта</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input required="" type="number" name="login" id="login" autocomplete="off" class="input">
+                                <label class="user-label">Номер телефона</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input required="" type="password" name="password" id="password" autocomplete="off" class="input">
+                                <label class="user-label">Пароль</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input required="" type="password" name="password2" id="password2" autocomplete="off" class="input">
+                                <label class="user-label">Пароль 2</label>
+                            </div>
+
+                        </div>
+                        
+                        <div style="margin-top: 3%;">
+                            <p id="p" style="font-size: calc(10px + (5 + 5 * 0.7) * (100vw - 320px) / 1280);;">Создавая учетную запись, вы соглашаетесь с нашими <a href="#">
+                                Условия & конфиденциальность</a>.</p>
+                              <button class="btn"> Зарегистрироваться</button>
+                        </div>
+                          
+                        </div>
+
+                      
+                      </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="fullscreen fullscreen_bg">
+            
+        </section>
+
+        <section class="fullscreen fullscreen_two">
+            <div class="fullscreen__body">
+                <div class="fullscreen__form_text">
+                    <p >
+                        Регистрация на нашем сайте<br> позволит вам оформлять интернет покупки запчастей высшего качества,
+                         <br>с возможностью доставки по Караганде
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="footer__body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Hic, dolorum?
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="http://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <script type="text/javascript">
+        function setCursorPosition(pos, e) {
+            e.focus();
+            if (e.setSelectionRange) e.setSelectionRange(pos, pos);
+            else if (e.createTextRange) {
+                var range = e.createTextRange();
+                range.collapse(true);
+                range.moveEnd("character", pos);
+                range.moveStart("character", pos);
+                range.select()
+            }
+        }
+
+        function mask(e) {
+            //console.log('mask',e);
+            var matrix = this.placeholder,// .defaultValue
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, "");
+            def.length >= val.length && (val = def);
+            matrix = matrix.replace(/[_\d]/g, function (a) {
+                return val.charAt(i++) || "_"
+            });
+            this.value = matrix;
+            i = matrix.lastIndexOf(val.substr(-1));
+            i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
+            setCursorPosition(i, this)
+        }
+        window.addEventListener("DOMContentLoaded", function () {
+            var input = document.querySelector("#online_phone");
+            input.addEventListener("input", mask, false);
+            input.focus();
+            setCursorPosition(3, input);
+        });
+
+        let formElement = document.querySelector('#form')
+        formElement.addEventListener('submit', async (e) => {
+            let form = new FormData(formElement)
+            e.preventDefault()
+            if(formElement.password.value != formElement.password2.value){
+                alert("Error")
+                return 
+            }
+            // Тут будет проверка почты
+            // ------------------------
+
+            let response = await fetch('http://172.28.0.76:8000/auth/users/', {
+                method: "POST",
+                body: form
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        })
+    </script>
+   
+</body>
+
+</html>
